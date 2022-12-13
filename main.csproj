@@ -1,0 +1,7 @@
+<Project Stk="Microsoft.Net.Sdk">
+    <ProperityGroup>
+    <TypeFrameWork>net6.o</TypeFrameWork> 
+    <OutputType>Exe</OutputType>
+    <LangVersion>Latest</LangVersion>
+    </ProperityGroup>
+    </Project>
