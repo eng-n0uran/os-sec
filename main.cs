@@ -14,13 +14,13 @@ Console.ReadLine();
 }*/
 public class person
 {
-    public string name1;
-    public int age1;
+    public string _name1;
+    public int _age1;
 
     public person(int age, string name)
     {
-        name1=name;
-        age1=age;
+        _name1=name;
+        _age1=age;
     }
     public void SetName(string name)
     {
@@ -28,17 +28,17 @@ public class person
         {
             throw new Exception("Name cannot be null or empty");
         }
-        name1 = name;
+        _name1 = name;
     }
     public string GetName()
     {
-        if(string.IsNullOrEmpty(name1))   
+        if(string.IsNullOrEmpty(_name1))   
         {
             return "no Name";
         }
         else
         {
-            return name1;
+            return _name1;
         }
     }
     public void SetAge(int age){
@@ -46,9 +46,9 @@ public class person
         {
             throw new Exception("not accepted age");
         }
-        age1=age
+        _age1=age
     public int GetAge();
-           return age1;
+           return _age1;
  public static void print()
  {
         Console.WriteLine($"my name is {GetName()}, my age is {GetAge()}");
@@ -73,9 +73,9 @@ public class Database{
     }
 }
 public class Student :person{
-    private int year1;
-    private double gpa1;
-    public Student (string name1,int age1,int year1,double gpa1 ):base(name1,age1){
+    private int _year1;
+    private double _gpa1;
+    public Student (string _name1,int _age1,int _year1,double _gpa1 ):base(_name1,_age1){
         if(gpa1<0||gpa1>4){
             throw new Exception("not accepted gpa");
         }
@@ -83,56 +83,56 @@ public class Student :person{
             throw new Exception("not accepted year");
         }
         
-        year1=year;
-        gpa1=gpa;
+        _year1=year;
+        _gpa1=gpa;
     }
-    public double GetGpa(); return gpa1;
-    public int GetYear() ; return year1;
+    public double GetGpa(); return _gpa1;
+    public int GetYear() ; return _year1;
     
-    public void SetGpa(double gpa1){
-        if(gpa1<0||gpa1>4){
+    public void SetGpa(double _gpa1){
+        if(_gpa1<0||_gpa1>4){
             throw new Exception("not accepted gpa");
         }
-        gpa1=gpa;
+        _gpa1=gpa;
     }
-    public void SetYear(int year1){
-        if(year1<1||year1>5){
+    public void SetYear(int _year1){
+        if(_year1<1||_year1>5){
             throw new Exception("not accepted year");
         }
-        year1=year;
+        _year1=year;
     }
     public override void Print(){
         Console.WriteLine($"my name is {GetName()}, my age is {GetAge()}, and gpa is {GetGpa()}");
     }
 }
   Public class staff :person{
-      private int joinYear1;
-    private double salary1;
-    public staff (string name1,int age1,double salary1 ,int joinyear1):base(name1,age1){
+      private int _joinYear1;
+    private double _salary1;
+    public staff (string _name1,int _age1,double _salary1 ,int _joinyear1):base(_name1,_age1){
         if(salary<0||salary>120000){
             throw new Exception("not accepted salary");
         }
-        int diffrence=joinyear1-age1;
+        int diffrence=_joinyear1-_age1;
         if(diffrence<=22){
             throw new Exception("not accepted year");
         }
-    salary1=salary;
-    joinYear1=joinyear;
+    _salary1=salary;
+    _joinYear1=joinyear;
     }
-    public double GetSalary() ;return salary1;
-    public void SetSalary(double salary1){
-        if(salary1<0 || salary1>120000){
-            throw new Exception("no salary");
+    public double GetSalary() ;return _salary1;
+    public void SetSalary(double _salary1){
+        if(_salary1<0 || _salary1>120000){
+            throw new Exception("not salary");
         }
-        salary1=salary;
+        _salary1=salary;
     }
-    public int GetJoinYear();return year1;
-    public void SetJoinYear(int joinyear1){
+    public int GetJoinYear();return _year1;
+    public void SetJoinYear(int _joinyear1){
         int differance=GetJoinYear()-GetAge();
         if(differance<=22){
             throw new Exception("no join year");
         }
-        joinYear1=joinyear;
+        _joinYear1=joinyear;
     }  public override void Print(){
             Console.WriteLine($"my name is {GetName()}, my age is {GetAge()}, and my salary is {GetSalary()}");
         }
@@ -149,30 +149,30 @@ public class Student :person{
     {
         case 1:
         Console.Write("the Name: ");
-        var name1=Console.ReadLine();
+        var _name1=Console.ReadLine();
         Console.Write("the Age: ");
-        var age1 =Convert.ToInt32(Console.ReadLine());
+        var _age1 =Convert.ToInt32(Console.ReadLine());
         Console.Write("the Year: ");
-        var year1 =Convert.ToInt32(Console.ReadLine());
+        var _year1 =Convert.ToInt32(Console.ReadLine());
         Console.Write("the Gpa: ");
-        var gpa1 = Convert.ToSingle(Console.ReadLine());
+        var _gpa1 = Convert.ToSingle(Console.ReadLine());
         break;
                 
         case 2:
         Console.Write("the Name: ");
-        name1=Console.ReadLine();
+        _name1=Console.ReadLine();
         Console.Write("the Age: ");
-        age1 =Convert.ToInt32(Console.ReadLine());
+        _age1 =Convert.ToInt32(Console.ReadLine());
         Console.Write("the Salary: ");
-        var salary1 = Convert.ToDouble(Console.ReadLine());
+        var _salary1 = Convert.ToDouble(Console.ReadLine());
         Console.Write("the JoinYear: ");
-        var joinyear1 = Convert.ToInt32(Console.ReadLine());
+        var _joinyear1 = Convert.ToInt32(Console.ReadLine());
         break;
         case 3:
         Console.Write("the Name: ");
-        name1=Console.ReadLine();
+        _name1=Console.ReadLine();
         Console.Write("the Age: ");
-        age1 =Convert.ToInt32(Console.ReadLine());
+        _age1 =Convert.ToInt32(Console.ReadLine());
         
         break;
         case 4:
