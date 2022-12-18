@@ -138,40 +138,40 @@ public class Student :person{
         }
 }public  class program{
     private static void Main(){
-    Console.WriteLine("enter a number 1)student 2)staff 3)print all peaple 4)person \"not a student and not a staff\"");
-    int x=1;
+    Console.WriteLine("put a number : 1 for student, 2 for staff, 3 for normal person ,4 for print all peaple );
+    int n=1;
     var database=new Database();
-    while (x!=0)
+    while (n!=0)
     {
-        Console.Write("Option: ");
-        x=Convert.ToInt32(Console.ReadLine());
-        switch (x)
+        Console.Write("the option is: ");
+        n=Convert.ToInt32(Console.ReadLine());
+        switch (n)
     {
         case 1:
-        Console.Write("Name: ");
-        var name=Console.ReadLine();
-        Console.Write("Age: ");
-        var age =Convert.ToInt32(Console.ReadLine());
-        Console.Write("Year: ");
-        var year =Convert.ToInt32(Console.ReadLine());
-        Console.Write("Gpa: ");
-        var gpa = Convert.ToSingle(Console.ReadLine());
+        Console.Write("the Name: ");
+        var name1=Console.ReadLine();
+        Console.Write("the Age: ");
+        var age1 =Convert.ToInt32(Console.ReadLine());
+        Console.Write("the Year: ");
+        var year1 =Convert.ToInt32(Console.ReadLine());
+        Console.Write("the Gpa: ");
+        var gpa1 = Convert.ToSingle(Console.ReadLine());
         break;
                 
         case 2:
-        Console.Write("Name: ");
+        Console.Write("the Name: ");
         name1=Console.ReadLine();
-        Console.Write("Age: ");
+        Console.Write("the Age: ");
         age1 =Convert.ToInt32(Console.ReadLine());
-        Console.Write("Salary: ");
+        Console.Write("the Salary: ");
         var salary1 = Convert.ToDouble(Console.ReadLine());
-        Console.Write("JoinYear: ");
+        Console.Write("the JoinYear: ");
         var joinyear1 = Convert.ToInt32(Console.ReadLine());
         break;
         case 3:
-        Console.Write("Name: ");
+        Console.Write("the Name: ");
         name1=Console.ReadLine();
-        Console.Write("Age: ");
+        Console.Write("the Age: ");
         age1 =Convert.ToInt32(Console.ReadLine());
         
         break;
