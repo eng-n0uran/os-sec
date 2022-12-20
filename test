@@ -1,0 +1,41 @@
+//اcreat class
+using System;
+namespace testoop{
+    class Employee{
+        public  int id;
+        public string name;//بنعمل publicعلشان يكونوا ظاهريين لما نستدعيهم في الكلاس الرئيسي
+        public string address;
+        public string phone;
+        public double salary;
+        public const  double tax=0.1;//const للحاجه الثابته دايما 
+        public double getNetSalary(){ //جيت ما هي الا وظيفه
+            double netsal= salary - (salary * tax);
+            return netsal;
+        }
+        public string getEmployeeData(){
+            string alldata="id : "+ id+"\n"+"name: "+name+"\n"+"address: "+address+"\n"+"phone: "+phone+"\n"+"netsalary: "+getNetSalary()+"\n";
+            return alldata;
+        }
+        public void printalldata(){
+            Console.WriteLine(" All data :"+getEmployeeData());
+        }
+      }
+       class program
+{
+ 
+    public static void Main(string[] args)
+    {
+      Employee e1= new Employee();
+      Console.WriteLine(" ENTER YOUR ID :");
+      e1.id=Convert.ToInt32(Console.ReadLine ( ));
+        Console.WriteLine(" ENTER YOUR name :");
+        e1.name=Console.ReadLine ( );
+        Console.WriteLine(" ENTER YOUR address :");
+        e1.address=Console.ReadLine ( );
+        Console.WriteLine(" ENTER YOUR  phone :");
+        e1.phone=Console.ReadLine ( );
+        Console.WriteLine(" ENTER YOUR salary :");
+        e1.salary=Convert.ToDouble(Console.ReadLine ( ));
+        e1.printalldata();
+    }
+}}
