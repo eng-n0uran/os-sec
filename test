@@ -26,6 +26,9 @@ namespace testoop{
     public static void Main(string[] args)
     {
       Employee e1= new Employee();
+      
+      for(int i=1; i<5;i++){
+      Console.WriteLine(" HELLO "+"\n");
       Console.WriteLine(" ENTER YOUR ID :");
       e1.id=Convert.ToInt32(Console.ReadLine ( ));
         Console.WriteLine(" ENTER YOUR name :");
@@ -37,5 +40,5 @@ namespace testoop{
         Console.WriteLine(" ENTER YOUR salary :");
         e1.salary=Convert.ToDouble(Console.ReadLine ( ));
         e1.printalldata();
-    }
+   } }
 }}
